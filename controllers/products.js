@@ -22,8 +22,24 @@ const createProduct = async (req, res) => {
     };
   // member 5 placeholder
     const deleteProduct = async (req, res) => {
-    res.send('deleteProduct placeholder'); 
-    }; 
+      try {
+        const {id} = req.params;
+        const deleteProduct = await Product.findbyIdAndDelete(id);
+        // check product actually existed in DB
+           if(!deleteproduct) {
+            return res.status(404).json({message: 'product not found'});
+           }
+        res.status(200).json({
+            message: 'product successfully deleted',
+        });   
+      } catch(error) {
+        res.status(500).json({
+            message: 'server error', error: error.message
+        });
+      }
+
+
+    
 
     module.exports = {
         createProduct,
