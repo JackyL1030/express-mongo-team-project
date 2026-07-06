@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
+import connectDB from "./db.js";
 
 dotenv.config(); 
 
@@ -14,5 +15,6 @@ app.get("/", (req,res) => {
 })
 
 app.listen(PORT, () =>{
+    connectDB();
     console.log("Server started at http://localhost:" + PORT);
 })
