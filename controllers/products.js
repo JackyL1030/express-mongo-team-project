@@ -5,19 +5,15 @@ const createProduct = async (req, res) => {
 };
 
 // member 2 task placeholder
-  const getProducts = async (req, res) => {
-    res.send('getProducts placeholder');
-  };
+const getProducts = async (req, res) => {
+  res.send("getProducts placeholder");
+};
 
- // member3 task placeholder
- 
-  const getProductbyId = async (req, res) => {
-    res.send('getProductbyId placeholder');
-  };
+// member3 task placeholder
 
-  // member 4 task placeholder
-    const updateProduct = async (req, res) => {
-    res.send('updateProduct placeholder');
+const getProductbyId = async (req, res) => {
+  res.send("getProductbyId placeholder");
+};
 
     };
   // member 5 placeholder
@@ -41,10 +37,10 @@ const createProduct = async (req, res) => {
 
     
 
-    module.exports = {
-        createProduct,
-        getProducts,
-        getProductbyId,
-        updateProduct,
-        deleteProduct
-    };
+module.exports = {
+  createProduct,
+  getProducts,
+  getProductbyId,
+  updateProduct,
+  deleteProduct,
+};
