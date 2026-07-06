@@ -1,3 +1,5 @@
+// importing the product model from models/product
+const Product = require('../models/product');
 const createProduct = async (req, res) => {
     res.send('createProduct placeholder');
 };
